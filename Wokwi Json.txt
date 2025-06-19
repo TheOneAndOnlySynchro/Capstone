@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp32", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht22",
+      "top": -124.5,
+      "left": 177,
+      "attrs": { "temperature": "45.8", "humidity": "78.5" }
+    },
+    {
+      "type": "wokwi-analog-sensor",
+      "id": "co2sensor",
+      "top": -60,
+      "left": 180,
+      "attrs": { "label": "CO2", "value": "512" }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "floatswitch",
+      "top": 119.6,
+      "left": 175.9,
+      "attrs": { "switch": "up" }
+    },
+    { "type": "wokwi-led", "id": "led", "top": 60, "left": -60, "attrs": { "color": "red" } },
+    { "type": "wokwi-pushbutton", "id": "button", "top": 60, "left": 60, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp32:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp32:RX0", "$serialMonitor:TX", "", [] ],
+    [ "dht22:VCC", "esp32:3V3", "red", [] ],
+    [ "dht22:GND", "esp32:GND", "black", [] ],
+    [ "dht22:SDA", "esp32:D15", "green", [] ],
+    [ "co2sensor:VCC", "esp32:3V3", "red", [] ],
+    [ "co2sensor:GND", "esp32:GND", "black", [] ],
+    [ "co2sensor:SIG", "esp32:A0", "blue", [] ],
+    [ "floatswitch:1", "esp32:GND", "black", [] ],
+    [ "floatswitch:2", "esp32:D4", "yellow", [] ],
+    [ "led:ANODE", "esp32:D2", "orange", [] ],
+    [ "led:CATHODE", "esp32:GND", "black", [] ],
+    [ "button:1", "esp32:GND", "black", [] ],
+    [ "button:2", "esp32:D18", "purple", [] ]
+  ],
+  "dependencies": {}
+}
