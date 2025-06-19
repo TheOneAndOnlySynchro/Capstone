@@ -20,7 +20,7 @@ This project is a simulated IoT system designed to monitor environmental paramet
 ### 1. Clone the repository
 
 ```bash
-https://github.com/YOUR_USERNAME/iot-hydroponics-project.git
+[https://github.com/TheOneAndOnlySynchro/Capstone.git]
 ```
 
 ### 2. Open Wokwi Simulation
