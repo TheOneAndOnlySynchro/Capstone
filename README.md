@@ -10,7 +10,7 @@ This project is a simulated IoT system designed to monitor environmental paramet
 * CO₂ concentration simulation using analog sensor
 * Water level detection with float switch
 * Visual LED alert for threshold breaches
-* Cloud integration using HTTP POST and Adafruit IO
+* Cloud integration using MQTT and Adafruit IO
 * Real-time dashboard with charts, gauges, and status indicators
 
 ---
